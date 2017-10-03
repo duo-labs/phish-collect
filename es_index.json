@@ -1,0 +1,85 @@
+{
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "html_analyzer": {
+                    "type": "standard",
+                    "char_filter": [
+                        "html_strip"
+                    ]
+                }
+            }
+        }
+    },
+    "mappings": {
+        "phish": {
+            "properties": {
+                "timestamp": {
+                    "type": "date"
+                },
+                "pid": {
+                    "type": "text"
+                },
+                "url": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "index_url": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "ip_address": {
+                    "type": "ip"
+                },
+                "feed": {
+                    "type": "keyword"
+                },
+                "has_kit": {
+                    "type": "boolean"
+                },
+                "status_code": {
+                    "type": "integer"
+                },
+                "html": {
+                    "type": "text",
+                    "analyzer": "html_analyzer"
+                },
+                "kits": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "kit": {
+            "properties": {
+                "filepath": {
+                    "type": "text"
+                },
+                "filename": {
+                    "type": "text"
+                },
+                "url": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "hash": {
+                    "type": "keyword"
+                },
+                "emails": {
+                    "type": "text"
+                }
+            }
+        }
+    }
+}

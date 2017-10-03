@@ -1,0 +1,12 @@
+[phishtank]
+username = ''
+password = ''
+url = ''
+last_seen = ''
+
+[openphish]
+url = ''
+
+[collector]
+kit_directory = 'kits'
+max_links_per_directory = 100
