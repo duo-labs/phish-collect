@@ -1,15 +1,16 @@
-Phish Kit Collection
-----
+<p align="center"><a href="/docs/full_graph.min.svg"><img src="/docs/full_graph.min.svg" width="300" align="center"></a></p>
 
-# Introduction
+# Phish Kit Collection
+
+## Introduction
 
 This is the code used in our experiment to collect phishing kits at scale. This requires integrations with phishing feed providers, which may need API keys or other credentials.
 
-# Deploying to EC2
+## Deploying to EC2
 
 We ran our experiment using an Amazon EC2 instance. This are the basic commands to get up and running.
 
-## Install the ELK Stack
+### Install the ELK Stack
 
 First, you need to install Elasticsearch and Kibana
 ```
@@ -53,7 +54,7 @@ sudo chkconfig --add kibana
 sudo -i service kibana start
 ```
 
-## Create our Indexes
+### Create our Indexes
 
 To index values in Elasticsearch, we have to create our indexes. We can do that with this command:
 
@@ -61,7 +62,7 @@ To index values in Elasticsearch, we have to create our indexes. We can do that 
 curl -XPUT localhost:9200/samples -H "Content-Type: application/json" -d @es_index.json
 ```
 
-## Download the Code
+### Download the Code
 
 To get the `phish_collect` code, clone the repository from Github:
 
@@ -69,7 +70,7 @@ To get the `phish_collect` code, clone the repository from Github:
 git clone https://github.com/duo-labs/phish_collect.git
 ```
 
-## Install Python Requirements
+### Install Python Requirements
 
 Next, you need to install all the requirements:
 
@@ -79,7 +80,7 @@ source .env/bin/activate
 pip install -r requirements.txt
 ```
 
-## Setup the Crontab
+### Setup the Crontab
 
 Since we want to run the script every 10 minutes, we need to add the following to our crontab:
 
@@ -89,7 +90,7 @@ Since we want to run the script every 10 minutes, we need to add the following t
 
 That's all there is to it! Now new samples will be downloaded and indexed to Kibana.
 
-# License
+## License
 
 ```
 BSD 3-Clause License
