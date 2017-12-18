@@ -54,20 +54,21 @@ sudo chkconfig --add kibana
 sudo -i service kibana start
 ```
 
-### Create our Indexes
-
-To index values in Elasticsearch, we have to create our indexes. We can do that with this command:
-
-```
-curl -XPUT localhost:9200/samples -H "Content-Type: application/json" -d @es_index.json
-```
-
 ### Download the Code
 
 To get the `phish_collect` code, clone the repository from Github:
 
 ```
 git clone https://github.com/duo-labs/phish_collect.git
+cd phish_collect
+```
+
+### Create our Indexes
+
+To index values in Elasticsearch, we have to create our indexes. We can do that with this command:
+
+```
+curl -XPUT localhost:9200/samples -H "Content-Type: application/json" -d @es_index.json
 ```
 
 ### Install Python Requirements
@@ -78,6 +79,12 @@ Next, you need to install all the requirements:
 virtualenv .env
 source .env/bin/activate
 pip install -r requirements.txt
+```
+
+### Make run script executable
+
+```
+chmod +x run.sh
 ```
 
 ### Setup the Crontab
