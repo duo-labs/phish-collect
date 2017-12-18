@@ -1,11 +1,11 @@
 [phishtank]
 username = ''
 password = ''
-url = ''
+url = 'http://data.phishtank.com/data/online-valid.csv'
 last_seen = ''
 
 [openphish]
-url = ''
+url = 'https://openphish.com/feed.txt'
 
 [collector]
 kit_directory = 'kits'
