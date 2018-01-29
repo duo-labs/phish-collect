@@ -10,3 +10,7 @@ url = ''
 [collector]
 kit_directory = 'kits'
 max_links_per_directory = 100
+
+[server]
+host = '0.0.0.0'
+port = 8888

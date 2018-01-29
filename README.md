@@ -97,6 +97,18 @@ Since we want to run the script every 10 minutes, we need to add the following t
 
 That's all there is to it! Now new samples will be downloaded and indexed to Kibana.
 
+## Using the Flask Server
+
+We've added a simple Flask server to let you submit URLs from external sources. It only has one endpoint, `/`, that accepts the following `POST` parameters:
+
+* `url` - The URL to process
+* `pid` (optional) - The sample ID (default: `uuid4()`)
+* `feed` (optional) - The feed (default: `server`)
+
+The response is a JSON payload of `{"processing": true}`. The sample is processed in the background by a pool of workers.
+
+To start the server, simply run `python server.py`. Configuration settings (interface and port) can be found in `config.toml`.
+
 ## License
 
 ```
