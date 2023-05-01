@@ -8,7 +8,7 @@ Click==7.0
 configparser==3.5.0
 elasticsearch==6.3.1
 enum34==1.1.6
-Flask==1.0.2
+Flask==2.3.2
 futures==3.2.0
 html5lib==1.0.1
 idna==2.8
