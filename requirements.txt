@@ -21,7 +21,7 @@ mccabe==0.6.1
 packaging==18.0
 pylint==1.9.3
 pyparsing==2.3.0
-requests==2.21.0
+requests==2.31.0
 requests-cache==0.4.13
 singledispatch==3.4.0.3
 six==1.12.0
