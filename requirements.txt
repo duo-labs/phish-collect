@@ -2,7 +2,7 @@ appdirs==1.4.3
 astroid==1.6.5
 backports.functools-lru-cache==1.5
 beautifulsoup4==4.6.3
-certifi==2018.11.29
+certifi==2023.7.22
 chardet==3.0.4
 Click==7.0
 configparser==3.5.0
